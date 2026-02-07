@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// This is the text view in the app whose colors can change randomly
+/// after being tapped.
 struct TextView: View {
     
-    let text: String
+    let text: LocalizedStringKey
     @State var color: Color
     
     let colors: [Color] = [
@@ -25,12 +27,24 @@ struct TextView: View {
         Color(red: 1, green: 215/255, blue: 0),
     ]
     
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    
+    var isIPad: Bool {
+        horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+    
+    var font: Font {
+        isIPad ? .largeTitle : .body
+    }
+    
     var body: some View {
         Text(text)
+            .font(font)
             .fontWeight(.semibold)
             .foregroundStyle(.white)
             .padding()
-            .background(color.opacity(0.4))
+            .background(color.opacity(0.5))
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .shadow(color: color,  radius: 5, x: 10, y: 10 )
             .onTapGesture {
@@ -47,3 +61,4 @@ struct TextView: View {
         TextView(text: "Peace", color: .purple)
     }
 }
+

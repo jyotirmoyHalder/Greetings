@@ -11,32 +11,34 @@ struct MessagesView: View {
     let messages: [DataItemModel] = [
         .init(
             text: "Hello there!",
-            color: .green
+            color: .myGreen
         ),
         .init(
             text: "Welcome to Swift Programming!",
-            color: .gray
+            color: .myGray
         ),
         .init(
             text: "Are you ready to?",
-            color: .yellow
+            color: .myYellow
         ),
         .init(
             text: "Start exploring?",
-            color: .red
+            color: .myRed
         ),
         .init(
             text: "Ready?",
-            color: .purple
+            color: .myPurple
         ),
     ]
     
     var body: some View {
-        ForEach(messages) { message in
-            TextView(
-                text: message.text,
-                color: message.color
-            )
+        VStack(alignment: .leading) {
+            ForEach(messages) { message in
+                TextView(
+                    text: message.text,
+                    color: message.color
+                )
+            }
         }
     }
 }
