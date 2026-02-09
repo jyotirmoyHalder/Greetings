@@ -4,7 +4,6 @@
 //
 //  Created by jyotirmoy_halder on 5/2/26.
 //
-// All type of icon being set
 
 import SwiftUI
 import TipKit

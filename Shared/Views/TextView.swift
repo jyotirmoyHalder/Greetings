@@ -31,7 +31,11 @@ struct TextView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     
     var isIPad: Bool {
+        #if os(macOS)
+        .title
+        #elseif os(iOS)
         horizontalSizeClass == .regular && verticalSizeClass == .regular
+        #endif
     }
     
     var font: Font {

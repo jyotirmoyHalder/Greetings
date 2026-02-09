@@ -6,14 +6,44 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B2FC72A82F35D03300CF6E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FC72992F35D03300CF6E88 /* Assets.xcassets */; };
+		B2FC72AE2F36E43700CF6E88 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B2FC72AD2F36E43700CF6E88 /* Localizable.xcstrings */; };
+		B2FC73362F398E7500CF6E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FC72992F35D03300CF6E88 /* Assets.xcassets */; };
+		B2FC73442F398E9C00CF6E88 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B2FC72AD2F36E43700CF6E88 /* Localizable.xcstrings */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B28E5E102F347A25008E31C6 /* Greetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greetings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FC72992F35D03300CF6E88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2FC72AD2F36E43700CF6E88 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B2FC730E2F398CCE00CF6E88 /* Greetings-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Greetings-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B28E5E122F347A25008E31C6 /* Greetings */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Greetings;
+			sourceTree = "<group>";
+		};
+		B2FC730F2F398CCE00CF6E88 /* Greetings-Mac */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Greetings-Mac";
+			sourceTree = "<group>";
+		};
+		B2FC731B2F398E2A00CF6E88 /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B2FC73292F398E2F00CF6E88 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B2FC73452F398EB600CF6E88 /* Tips */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Tips;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +56,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2FC730B2F398CCE00CF6E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B28E5E072F347A25008E31C6 = {
 			isa = PBXGroup;
 			children = (
+				B2FC73192F398DAD00CF6E88 /* Shared */,
 				B28E5E122F347A25008E31C6 /* Greetings */,
+				B2FC730F2F398CCE00CF6E88 /* Greetings-Mac */,
 				B28E5E112F347A25008E31C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +80,21 @@
 			isa = PBXGroup;
 			children = (
 				B28E5E102F347A25008E31C6 /* Greetings.app */,
+				B2FC730E2F398CCE00CF6E88 /* Greetings-Mac.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B2FC73192F398DAD00CF6E88 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC73452F398EB600CF6E88 /* Tips */,
+				B2FC72992F35D03300CF6E88 /* Assets.xcassets */,
+				B2FC731B2F398E2A00CF6E88 /* Model */,
+				B2FC73292F398E2F00CF6E88 /* Views */,
+				B2FC72AD2F36E43700CF6E88 /* Localizable.xcstrings */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,12 +114,40 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B28E5E122F347A25008E31C6 /* Greetings */,
+				B2FC731B2F398E2A00CF6E88 /* Model */,
+				B2FC73292F398E2F00CF6E88 /* Views */,
+				B2FC73452F398EB600CF6E88 /* Tips */,
 			);
 			name = Greetings;
 			packageProductDependencies = (
 			);
 			productName = Greetings;
 			productReference = B28E5E102F347A25008E31C6 /* Greetings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2FC730D2F398CCE00CF6E88 /* Greetings-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2FC73162F398CD000CF6E88 /* Build configuration list for PBXNativeTarget "Greetings-Mac" */;
+			buildPhases = (
+				B2FC730A2F398CCE00CF6E88 /* Sources */,
+				B2FC730B2F398CCE00CF6E88 /* Frameworks */,
+				B2FC730C2F398CCE00CF6E88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B2FC730F2F398CCE00CF6E88 /* Greetings-Mac */,
+				B2FC731B2F398E2A00CF6E88 /* Model */,
+				B2FC73292F398E2F00CF6E88 /* Views */,
+				B2FC73452F398EB600CF6E88 /* Tips */,
+			);
+			name = "Greetings-Mac";
+			packageProductDependencies = (
+			);
+			productName = "Greetings-Mac";
+			productReference = B2FC730E2F398CCE00CF6E88 /* Greetings-Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -81,6 +161,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					B28E5E0F2F347A25008E31C6 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					B2FC730D2F398CCE00CF6E88 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -104,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				B28E5E0F2F347A25008E31C6 /* Greetings */,
+				B2FC730D2F398CCE00CF6E88 /* Greetings-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -113,6 +197,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FC72A82F35D03300CF6E88 /* Assets.xcassets in Resources */,
+				B2FC72AE2F36E43700CF6E88 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FC730C2F398CCE00CF6E88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FC73362F398E7500CF6E88 /* Assets.xcassets in Resources */,
+				B2FC73442F398E9C00CF6E88 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +215,13 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		B28E5E0C2F347A25008E31C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FC730A2F398CCE00CF6E88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,13 +379,14 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Debug;
@@ -320,14 +423,92 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		B2FC73172F398CD000CF6E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jyotirmoyhalder.Greetings-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B2FC73182F398CD000CF6E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jyotirmoyhalder.Greetings-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -348,6 +529,15 @@
 			buildConfigurations = (
 				B28E5E1C2F347A27008E31C6 /* Debug */,
 				B28E5E1D2F347A27008E31C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2FC73162F398CD000CF6E88 /* Build configuration list for PBXNativeTarget "Greetings-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FC73172F398CD000CF6E88 /* Debug */,
+				B2FC73182F398CD000CF6E88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
