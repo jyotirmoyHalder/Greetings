@@ -10,7 +10,7 @@ import TipKit
 
 struct GreetingsTip: Tip {
     var title: Text {
-        Text("Click on text and disc")
+        Text("Click on text")
     }
     
     var message: Text? {
@@ -21,3 +21,19 @@ struct GreetingsTip: Tip {
         Image(systemName: "figure.walk.motion")
     }
 }
+
+struct GreetingsTipDisc: Tip {
+    var title: Text {
+        Text("Click on disc")
+    }
+    
+    var message: Text? {
+        Text("Disc will generate nice animations!")
+    }
+    
+    var asset: Image? {
+        Image(systemName: "opticaldisc.fill")
+    }
+}
+
+
