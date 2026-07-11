@@ -34,7 +34,6 @@ struct TitleView: View {
                 .popoverTip(
                     greetingsTip.currentTip as? GreetingsTipDisc
                 )
-            
         }
     }
 }
